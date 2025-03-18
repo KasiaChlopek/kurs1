@@ -1,4 +1,21 @@
 body {
     margin:100px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+    
+    h1 {
+        font-size: 2.5rem
+    };
+
+    main { 
+        display:flex;
+        gap: 15px;
+
+        .picture {
+            border:2px dashed #722020;
+            flex:2;
+            background: linear-gradient(45deg, #FA9696 0%, #FD5BA8 49%, #FF75F1 100%);
+            border-radius: 8px
+        }
+        header{
+            border: 2px dashed #000;}
+    }
