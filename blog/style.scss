@@ -18,7 +18,6 @@ body {
         gap: 15px;
 
         .picture {
-            border:2px dashed #722020;
             flex:2;
             background: linear-gradient(45deg, #FA9696 0%, #FD5BA8 49%, #FF75F1 100%);
             border-radius: 8px;
@@ -46,6 +45,16 @@ body {
     
     
     
+    }
+}
+}
+@media(min-width: 1200px){
+    body{
+        main{
+        flex-direction: column;
+    }
+    .picture{
+        min-height: 350px;
     }
 }
 }
