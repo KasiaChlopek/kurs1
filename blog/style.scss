@@ -4,7 +4,14 @@ body {
     
     h1 {
         font-size: 2.5rem
-    };
+    }
+    .date {
+        border: dashed 2px #722020;
+        color: #888;
+        letter-spacing: .2px;
+        font-weight: 700;
+        margin: 0;
+    }
 
     main { 
         display:flex;
@@ -14,8 +21,31 @@ body {
             border:2px dashed #722020;
             flex:2;
             background: linear-gradient(45deg, #FA9696 0%, #FD5BA8 49%, #FF75F1 100%);
-            border-radius: 8px
+            border-radius: 8px;
+            min-height: 150px;
         }
         header{
-            border: 2px dashed #000;}
+            border: 2px dashed #520d0d;
+        
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top:20px;
+            
+            article {
+                width: 30%;
+                margin-bottom: 20px;
+
+                .date{
+                    margin-top: 30px
+                }
+            }
+        }
+
+    
+    
+    
     }
+}
+}

@@ -1,4 +1,35 @@
 body {
   margin: 100px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body h1 {
+  font-size: 2.5rem;
+}
+body .date {
+  border: dashed 2px #722020;
+  color: #888;
+  letter-spacing: 0.2px;
+  font-weight: 700;
+  margin: 0;
+}
+body main {
+  display: flex;
+  gap: 15px;
+}
+body main .picture {
+  border: 2px dashed #722020;
+  flex: 2;
+  background: linear-gradient(45deg, #FA9696 0%, #FD5BA8 49%, #FF75F1 100%);
+  border-radius: 8px;
+}
+body main header {
+  border: 2px dashed #520d0d;
+  flex: 1;
+}
+body main header section {
+  border: 2px dashed #520d0d;
+}
+body main header section article {
+  border: 2px dashed #520d0d;
+  flex: 1;
 }/*# sourceMappingURL=style.css.map */
