@@ -24,19 +24,20 @@ body main .picture {
 }
 body main header {
   border: 2px dashed #520d0d;
+  flex: 1;
 }
-body main header section {
+body main header article {
+  width: 30%;
+  margin-bottom: 20px;
+}
+body main header article .date {
+  margin-top: 30px;
+}
+body section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 20px;
-}
-body main header section article {
-  width: 30%;
-  margin-bottom: 20px;
-}
-body main header section article .date {
-  margin-top: 30px;
 }
 
 @media (min-width: 1200px) {
