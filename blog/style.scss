@@ -29,14 +29,7 @@ body {
         
         
             
-            article {
-                width: 30%;
-                margin-bottom: 20px;
-
-                .date{
-                    margin-top: 30px
-                }
-            }
+           
         }
 
        
@@ -48,6 +41,15 @@ section {
     justify-content: space-between;
     margin-top:20px;
 
+    article {
+    width: 30%;
+    margin-bottom: 20px;
+
+        .date{
+            margin-top: 30px
+        }
+    }
+
 } 
 }
 @media(min-width: 1200px){
@@ -56,7 +58,10 @@ section {
         flex-direction: column;
     }
     .picture{
-        min-height: 350px;
+        flex:2;
+        background: linear-gradient(45deg, #FA9696 0%, #FD5BA8 49%, #FF75F1 100%);
+        border-radius: 8px;
+        min-height: 150px;
     }
 }
 }
