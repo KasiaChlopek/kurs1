@@ -1,4 +1,13 @@
 body{
     background-color: rgb(207, 195, 154);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+
+    .container-1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        
+    }
 }
