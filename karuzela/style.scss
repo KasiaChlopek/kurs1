@@ -4,7 +4,7 @@ body{
     text-align: center;
 
     .contaier {
-    width: 100%;
+    width: 100px;
     height: 100px;
     position: apbsolute;
     border: 2px dashed red;
@@ -14,11 +14,15 @@ body{
     align-items: center;
         
         .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: relative;
             width: 30%;
             background-color: #4CAF50;
             height: 100px;
-
+            gap: 20px; 
+            border: 2px dashed rgb(50, 9, 152);
           }
         
     }
