@@ -1,7 +1,6 @@
 body{
     max-width: 1200px;
     margin: auto;
-    background-color: rgb(219, 200, 219);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     
@@ -11,12 +10,9 @@ body{
         display: flex;
         justify-content: space-between;
         min-height: 70vh;
-        border: 2px dashed red;
     }
 
     .contaier {
-     width: 100px;
-     height: 100px;
      position: relative;
      flex: 1;
     }
@@ -24,8 +20,9 @@ body{
     .box {
      position: absolute;
      height: 100%;
+     opacity: 0;
     }
-    
+
     img { 
      max-height: 100%;
      max-width: 100%;
@@ -37,10 +34,15 @@ body{
         align-items: center;
 
     }
-    .arrow{ border: 2px dashed red;
+    .arrow-left {
     min-width: 10vw;
     background-color: rgba(100, 88, 88, 0.242);
     cursor: pointer;
-   
+
+    }
+    .arrow-right { 
+        min-width: 10vw;
+        background-color: rgba(100, 88, 88, 0.242);
+        cursor: pointer;
     }
 }
