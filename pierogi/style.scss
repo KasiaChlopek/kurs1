@@ -1,0 +1,228 @@
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body{
+    min-height:100vh;
+    min-height:100svh;
+    margin:0;
+  }
+  
+  @keyframes sliding {
+    from {
+      transform: translateY(-90%);
+    }
+  
+    to {
+      transform: translateY(90%);
+    }
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    
+    to{
+      transform: rotate(360deg);
+    }
+    
+  }
+  
+  @keyframes cant-hit {
+    0%{ opacity:.8; }
+    25%{ opacity:.2; }
+    50%{ opacity:.8; }
+    75%{ opacity:.2; }
+    100%{ opacity:.8; }
+  }
+  
+  .in-game{
+    cursor:none;
+  }
+  
+  .gameplane{
+    min-height: 100vh;
+    min-height: 100svh;
+    background-size: auto 100%;
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+  
+    .space {
+      --animation-speed: 5s;
+  
+      background-image: url('./images/background-pattern.jpg');
+      background-size: auto 100%;
+      inset:0;
+  
+      &.bg1{
+        animation: sliding var(--animation-speed) linear infinite;
+      }
+    
+      &.bg2{
+        animation: sliding var(--animation-speed) linear infinite;
+        animation-delay: 2.5s;
+      }
+  
+    }
+  
+    > div, > img {
+      position:absolute;
+      img{
+        max-width:100%;
+        max-height:100%;
+      }
+    }
+  
+    .pierog{
+      --pierog-width: 30%;
+  
+      width:var(--pierog-width);
+      top: 50%;
+      left: calc(50% - (var(--pierog-width) / 2));
+  
+      &.cant-hit{
+        animation: cant-hit 2s infinite;
+      }
+  
+      .face{
+        position:absolute;
+        inset:0;
+        background-image: url('./images/pierog_face.webp');
+        background-size:cover;
+  
+        &::before,
+        &::after{
+          content: "";
+          position: absolute;
+          inset:0;
+          background-image: url('./images/pierog_face_sad.webp');
+          background-size:cover;
+          opacity:0;
+        }
+  
+        &::after{
+          background-image: url('./images/pierog_face_happy.webp');
+        }
+  
+        &.sad{
+          background-image: unset;
+  
+          &::before{
+            opacity:1;
+          }
+  
+        }
+  
+        &.happy{
+          background-image: unset;
+          
+          &::after{
+            opacity:1;
+          }
+        }
+        
+  
+      }
+  
+    }
+  
+    .meteor, .mushroom{
+      --meteor-width:15%;
+  
+      width: var(--meteor-width);
+      aspect-ratio: 1/1;
+      background-size:contain;
+      background-repeat: no-repeat;
+      animation: rotate 1s linear infinite;
+      
+    }
+  
+    .lives{
+      bottom:0;
+      width:30%;
+      display:flex;
+  
+      .live{
+        width:33%;
+        aspect-ratio: 1/1;
+        background: url('./images/live.webp');
+        background-size: contain;
+      }
+      
+    }
+  
+    .modal-wrapper{
+      inset:0;
+      background: #000;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      z-index:1;
+  
+      .modal{
+        border-radius: 8px;
+        background: #ffffff22;
+        padding: 40px 60px;
+        max-width: 50%;
+  
+        .modal-inner{
+          display:flex;
+          flex-direction: column;
+          gap:10px;
+  
+          h1{
+            margin:0;
+          }
+  
+          button{
+            width:100%;
+            padding:20px;
+            font-weight: 900;
+            cursor:pointer;
+            border-radius: 5px;
+            border:none;
+          }
+  
+        }
+  
+  
+      }
+  
+    }
+  
+    .score-wrapper{
+      bottom:0;
+      right:0;
+      width:33%;
+      aspect-ratio: 3/1;
+      display:flex;
+      gap:10px;
+  
+      .score-icon{
+        width:33%;
+        aspect-ratio: 1/1;
+        background: url('./images/mushroom.webp');
+        background-size: contain;
+      }
+  
+      .score{
+        flex:1;
+        display: flex;
+        align-items: center;
+        font-size: 4rem;
+      }
+  
+    }
+  
+  }
+  
+  
+  @media (max-width: 768px){
+    .gameplane .modal-wrapper .modal{
+      max-width: 90%;
+    }
+  }
+  

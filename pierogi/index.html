@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pierogi</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="gameplane">
+    <div class="space bg1"></div>
+    <div class="space bg2"></div>
+
+    <div class="pierog">
+      <img src="./images/pierog.webp" alt="PIERÓG">
+      <div class="face"></div>
+    </div>
+
+    <div class="lives">
+      <div class="live"></div>
+      <div class="live"></div>
+      <div class="live"></div>
+    </div>
+
+    <div class="modal-wrapper game-intro-modal" >
+      <div class="modal">
+        <div class="modal-inner">
+          <header>
+            <h1>Historia pieroga</h1>
+            <p>
+              Pieróg wyrusza w kosmos, by odnaleźć legendarne grzyby i ocalić smak galaktyki. Te mączne przysmaki od wieków królują na stołach, ale teraz jeden z nich ma większą misję. Pomóż mu w międzygwiezdnej przygodzie pełnej smaku i niebezpieczeństw!
+            </p>
+          </header>
+          <div class="action">
+            <button id="start_button">ROZPOCZNIJ GRĘ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-wrapper game-over-modal" style="display:none">
+      <div class="modal">
+        <div class="modal-inner">
+          <header>
+            <h1>Gratulacje</h1>
+            <p>
+              Twój wynik to <span class="score-small"></span>
+            </p>
+          </header>
+          <div class="action">
+            <button id="restart_button">ZAGRAJ JESZCZE RAZ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="score-wrapper">
+      <div class="score-icon"></div>
+      <div class="score">0</div>
+    </div>
+
+  </div>
+
+</body>
+</html>
